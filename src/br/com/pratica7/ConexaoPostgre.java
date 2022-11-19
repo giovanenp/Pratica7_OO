@@ -7,11 +7,10 @@ import java.sql.SQLException;
 public class ConexaoPostgre {
   private final static String url = "jdbc:postgresql://localhost/BDlivrariaUniversitaria";
   private final static String user = "postgres";
-  private final static String password = "123456";
+  private final static String password = "hs@2012";
   static Connection conn = null;
   
   public static Connection connect() {
-
     try {
       conn = DriverManager.getConnection(url, user, password);
 
@@ -25,7 +24,6 @@ public class ConexaoPostgre {
     }
     return conn;
   }
-
 
   public static void printSQLException(SQLException ex) {
     for (Throwable e : ex) {
